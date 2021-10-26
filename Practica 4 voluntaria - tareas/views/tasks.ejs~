@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Gestor de Tareas</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" media="screen" href="css/tasksScreen.css">
+    <link rel="stylesheet" media="print" href="css/tasksPrint.css">
+    <link rel="icon" type="img/png" href="img/icon.png">
+</head>
+
+<body>
+
+    <div class="heading">
+        <div class="logo">Esta semana tengo que...</div>
+        <div class="infoUser">
+            <img class="imgUser" src="img/gato2.webp">
+            <div class="User">
+                <a href=" ">usuario@gmail.com</a>
+                <a href=" " class="boton">Desconectar</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="containerTasks">
+        <% taskList.forEach(function(task) { %>
+            <% if(task.done==0){ %>
+                <div class="elemento">
+                    <p class="texto">
+                        <%=task.text%>
+                    </p>
+
+                   
+
+                    <a class="botonFin" href="/finish/<%=task.id%>">MARCAR FINALIZADA</a>
+
+                </div>
+                <% } else{ %>
+                    <div class="elementoCross">
+                        <p class="texto texto_cross">
+                            <%=task.text%>
+                        </p>
+                    </div>
+                    <% } %>
+
+                        <% }); %>
+
+                            <div class="AddTask">
+                                <form action="addTask" method="POST">
+                                    <input type="text" name="text" class="Write">
+                                    <input type="submit" button class="botonAdd" value=AÑADIR>
+                                </form>
+                            </div>
+
+                            <div class="DeleteTask">
+                                <a class="botonDelete" href="/deleteCompleted">Eliminar Tareas Completadas</a>
+                            </div>
+    </div>
+
+</body>
+
+</html>

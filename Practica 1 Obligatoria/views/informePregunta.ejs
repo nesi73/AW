@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/principal.css">
+    <link rel="stylesheet" href="/css/formular.css">
+    <link rel="stylesheet" href="/css/preguntas.css">
+    <link rel="stylesheet" href="/css/informePregunta.css">
+    <link rel="icon" type="img/png" href="/recursos/404icon.png">
+    <title>404</title>
+</head>
+
+<body>
+
+    <%- include('header'); %>
+
+        <h1>
+            <%=titulo%>
+        </h1>
+
+        <div class="questionBody">
+
+            <!-- PREGUNTA -->
+            <div class="view">
+                <p>Vistada <%=pregunta.visitas%> veces</p>
+            </div>
+
+            <div class="element">
+                <div class="information">
+
+                    <% if (pregunta.votos>=0) { %>
+                    <div class="puntuationVerde">
+                     <% } else { %>
+                    <div class="puntuationRojo">
+                    <% } %>
+                    
+                        <p>
+                            <%=pregunta.votos%> Votos
+                        </p>
+                        <a href="/preguntas/<%=1%>/<%=pregunta.id%>">
+                            <input type="image" class="vote" src="/recursos/like.png">
+                        </a>
+
+                        <a href="/preguntas/<%=-1%>/<%=pregunta.id%>">
+                            <input type="image" class="vote" src="/recursos/dislike.png">
+                        </a>
+                    </div>
+
+                    <%- include('plantillaPregunta'); %>
+                </div>
+
+                <div class="usuario">
+                    <%- include('plantillaUsuario', {usuario: pregunta}); %>
+                </div>
+
+            </div>
+
+            <!-- RESPUESTAS -->
+            <h4>
+                <%=respuestas.length%> Respuestas
+            </h4>
+
+            <% if (respuestas !=undefined) { %>
+                <% respuestas.forEach(function(r) { %>
+
+                    <div class="element">
+
+                        <div class="information">
+                            <%- include('plantillaRespuesta', {r: r}); %>
+                        </div>
+
+                        <div class="usuario">
+                            <%- include('plantillaUsuario', {usuario: r}); %>
+                        </div>
+
+                    </div>
+
+                    <% }); %>
+                        <% } %>
+
+            <!-- TU RESPUESTA -->
+            <form class="formular" method="POST" action="/preguntas/procesar_respuesta/<%=pregunta.id%>">
+                <div class="ownAnswer">
+                    <h4>Tu respuesta</h4>
+                    <textarea name="textarea" class="box" required></textarea>
+                </div>
+
+                <button class="button" type="submit">Publica tu respuesta</button>
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+div.element{
+    padding:0;
+}
+
+div.usuario{
+    margin-top:15px;
+    margin-bottom:15px;
+    text-align: center;
+    padding-left: 20px;
+}
+
+div.questionBody{
+    display: flex;
+    flex-direction: column;
+    width:70%;
+    margin-left: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
+}
+
+div.view{
+    margin-left:10px;
+}
+
+div.questionBody p{
+    font-size:20px;
+}
+
+h4{
+    margin-top:40px;
+    margin-left:10px;
+}
+
+div.information{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin:10px;
+}
+
+div.information p{
+    margin:10px;
+}
+
+div.puntuationVerde{
+    display:flex;
+    margin-left:5px;
+    text-align: center;
+    background-color: aquamarine;
+}
+
+div.puntuationRojo{
+    display:flex;
+    margin-left:5px;
+    text-align: center;
+    background-color: rgb(247, 122, 122);
+}
+
+.vote{
+    padding:5px;
+    margin-left:15px;
+    height:40px;
+}
+
+.vote:hover{
+    height:45px;
+}
+
+div.ownAnswer{
+    margin-top:50px;
+}
+
+div.ownAnswer .box{
+    height: 200px;
+    width: 99%;
+}
+
+div.questionBody button{
+    margin-bottom: 15px;
+}

@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    /* border: 1px solid red; */
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    background: url("../recursos/bg_cat.jpg") no-repeat center fixed;
+    background-size: cover;
+}
+
+.logo{
+    width: 320px;
+    margin-top: 13px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.datos{
+    display: flex;
+    flex-direction: column;
+}
+
+div.datos h1{
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+div.datos .descripcion{
+    font-size: 22px;
+    text-align: center;
+    color: rgb(71, 70, 70);
+}
+
+div.datos .descripcion2{
+    font-size: 17px;
+    margin-top:10px;
+    text-align: center;
+    color: rgb(96, 96, 96);
+}
+
+div.datos .crearCuenta{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 24px;
+}
+
+.botonUnir{
+    color:#0d74af;
+    font-weight: bold;
+}
+
+.botonUnir:hover{
+    color: rgb(239, 116, 250);
+}
+
+div.info{    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom:40px;
+    padding-top: 50px;
+}
+
+div.info p{
+    padding-bottom: 10px;
+    font-size:22px;
+}
+    
+.box{
+    font-size:20px;
+    margin-bottom:20px;
+    padding:5px;
+    height:40px;
+    width:25%;
+}
+
+.error{
+    margin-top: 3px;
+    color:red;
+    font-size: 20px;
+}
+
+.button{
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+    border-radius: 5px;
+    font-size:22px;
+    width: 20%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    background-color: #0f679b;
+    color: white;
+    border: 2px solid rgb(36, 45, 85);
+}
+
+div.error{
+    margin-bottom: 1px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.button:hover{
+    background-color:#6CC8C3;
+    cursor: pointer;
+}

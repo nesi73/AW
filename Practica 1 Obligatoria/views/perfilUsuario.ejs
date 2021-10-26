@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/principal.css">
+    <link rel="stylesheet" href="/css/preguntas.css">
+    <link rel="stylesheet" href="/css/perfilUsuario.css">
+    <link rel="icon" type="img/png" href="/recursos/404icon.png">
+    <title>404</title>
+</head>
+
+<body>
+
+    <%- include('header'); %>
+
+        <div class="profile">
+
+            <div class="allStatistics">
+                <div class="element usuario">
+                    <div class="avatar">
+                        <img class="avatar" src="../../profile_imgs/<%=usuario.avatar%>">
+                    </div>
+                    <p class="bold">
+                        <%=usuario.nombre%>
+                            <p>
+                                Miembro desde <%=usuario.fecha%>
+                            </p>
+                </div>
+                <div class="statistics">
+                    <p class="titleStatistics">Estadísticas</p>
+                    <div class="type">
+                        <div class="right">
+                            <p>Preguntas</p>
+                            <p class="bold number">
+                                <%=usuario.npreguntas%>
+                            </p>
+                            <img class="cat1" src="/recursos/cat_preguntas.png">
+                        </div>
+                        <div class="middle">
+                            <p>Reputación</p>
+                            <p class="bold number">
+                                <%=usuario.reputacion%>
+                            </p>
+                            <img class="cat2" src="/recursos/cat_reputacion.png">
+                        </div>
+                        <div class="left">
+                            <p>Respuestas</p>
+                            <p class="bold number">
+                                <%=usuario.nrespuestas%>
+                            </p>
+                            <img class="cat3" src="/recursos/cat_respuestas.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="titleMedals">Medallas</p>
+            <div class="medals">
+                <div class="bronzeMedal">
+                    <div class="bronze">
+                        <p>BRONCE</p>
+                        <p class="bold number">
+                            <%=usuario.totalBronce%>
+                        </p>
+                    </div>
+                    <div class="bronzeTags">
+                        <% usuario.medallasBronce.forEach(function(m) { %>
+
+                            <div class="tag">
+                                <img class="imgMedals" src="/recursos/bronzeMedal.png">
+                                <p>
+                                    <%=m.logro%>
+                                </p>
+                                <p>
+                                    x<%=m.cantidad%>
+                                </p>
+                            </div>
+
+                            <% }); %>
+                    </div>
+                </div>
+                <div class="silverMedal">
+                    <div class="silver">
+                        <p>PLATA</p>
+                        <p class="bold number"> <%=usuario.totalPlata%></p>
+                    </div>
+                    <div class="silverTags">
+                        <% usuario.medallasPlata.forEach(function(m) { %>
+
+                            <div class="tag">
+                                <img class="imgMedals" src="/recursos/silverMedal.png">
+                                <p>
+                                    <%=m.logro%>
+                                </p>
+                                <p>
+                                    x<%=m.cantidad%>
+                                </p>
+                            </div>
+
+                            <% }); %>   
+                    </div>
+                </div>
+                <div class="goldMedal">
+                    <div class="gold">
+                        <p>ORO</p>
+                        <p class="bold number"> <%=usuario.totalOro%></p>
+                    </div>
+                    <div class="goldTags">
+
+                        <% usuario.medallasOro.forEach(function(m) { %>
+
+                            <div class="tag">
+                                <img class="imgMedals" src="/recursos/goldMedal.png">
+                                <p>
+                                    <%=m.logro%>
+                                </p>
+                                <p>
+                                    x<%=m.cantidad%>
+                                </p>
+                            </div>
+
+                            <% }); %> 
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

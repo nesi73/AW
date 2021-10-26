@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="img/png" href="/recursos/404icon.png">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <% if (r.votos>=0) { %>
+    <div class="puntuationVerde">
+         <% } else { %>
+    <div class="puntuationRojo">
+        <% } %>
+        
+        <p>
+            <%=r.votos%> Votos
+        </p>
+
+        <a href="/preguntas/<%=1%>/<%=pregunta.id%>/<%=r.id%>">
+            <input type="image" class="vote" src="/recursos/like.png">
+        </a>
+
+        <a href="/preguntas/<%=-1%>/<%=pregunta.id%>/<%=r.id%>">
+            <input type="image" class="vote" src="/recursos/dislike.png">
+        </a>
+    </div>
+
+    <p>
+        <%=r.texto%>
+    </p>
+
+</body>
+
+</html>

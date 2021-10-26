@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Grandstander&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Grandstander', cursive;
+}  
+
+body{
+    background-image: url("../img/fondoGatosDifuminada.jpg");
+    background-size: 50%;
+    background-position: 50%;
+    background-repeat: repeat;
+}
+
+
+/*HEADER*/
+div.heading {
+    position: fixed;
+    top: 0px;
+    justify-content: space-between;
+    width: 100%; /*ocupa toda la pantalla de largo*/
+    height: 110px; /*poner px para que sea fijo, El % es para que cambie con el tamaño de la ventana*/
+    background-color: rgb(219, 208, 201)
+}
+
+div.heading a { /*enlaces dentro de navegacion*/
+    text-decoration: none;
+    padding-bottom: 15px;
+    color:#5f272c;
+}
+
+div.login{
+    background-color: #6ac7c2;
+    margin-top: 20%;
+    margin-left: 40%;
+    width: 20%;
+    padding: 20px;
+}
+
+div.login p{
+    padding-bottom: 3px;
+    padding-top: 30px;
+    font-size: 30px;
+}
+
+.box{
+    width: 70%;
+    height: 20px;
+}
+
+div.aceptar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.error{
+    color:red;
+    margin-top: 5px;
+}
+
+div.login button{
+    margin-top:40px;
+    text-align: center;
+    font-size: 30px;
+    padding:5px;
+}
+
+div.infoUser{
+    display: flex;
+    flex-direction: row;
+    position:absolute;
+    top:5px;
+    right:0;
+    width:15%;
+}
+
+.imgUser{
+    border-radius:50%;
+    width:29%;
+}
+
+div.User{
+    display: flex;
+    flex-direction: column;
+    padding-top:28px;
+    padding-left:15px;
+    text-align: center;
+}
+
+.boton:hover{ 
+    color: #e8858e;
+}
+
+div.logo{
+    padding-top: 15px;
+    padding-left: 15px;
+    font-size: 80px;
+    color: #e8858e;
+    text-shadow: -3px 3px #ffffff, -3px -3px #ffffff, 3px -3px #ffffff, 3px 3px #f3f3f2, 6px 6px #6ac7c2;
+}
+
+.imgTask{
+    display:block;
+    height:110px;
+}
+
+/*TAREAS*/
+div.containerTasks{
+    display: flex;
+    flex-direction: column;
+    margin: 10%;
+}
+
+.elemento {
+    background-color: #e8858e;
+    border: solid #5f272c 5px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.elementoCross {
+    background-color: rgba(117, 117, 117, 0.603);
+    border: solid rgb(71, 71, 71) 5px;
+    padding: 10px;
+    margin:10px;
+}
+
+p.texto{
+    display: inline-block;
+    font-size: 30px;
+    color:white;
+    padding-top: 5px;
+    padding-left: 20px;
+    font-weight: 100;
+}
+
+p.texto_cross{
+    text-decoration: line-through rgb(21, 56, 40);
+}
+
+.tag{
+    display: inline-block;
+    padding: 4px;
+    margin-left: 2%;
+    font-size: 20px;
+    color:white;
+    border-radius: 10px 10px 10px 10px;
+    background-color:  #973d45;
+    border: 2px solid  #5f272c;
+}
+
+.aTag{
+    margin-left:2px;
+}
+
+.botonFin{
+    text-decoration: none;
+    float: right;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+    text-align: center;
+    background-color: #b4e4e1ea;
+    font-size: 20px;
+    color: black;
+}
+
+.botonAdd{
+    color: white;
+    width:auto;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 6px;
+    margin-top: 12px;
+    margin-left:45%;
+    text-align: center;
+    font-size: 30px;
+    background-color:  #e8858e;
+}
+
+.botonAddTag{
+    margin-right: 40px;
+    margin-left: 10px;
+}
+
+div.AddTask{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 20px;
+
+    background-color:  #5f272c;
+}
+
+.añadirTag{
+    display:flex;
+    align-items: center;
+}
+
+.label{
+    color:white;
+    margin-bottom:5px;
+}
+
+.WriteTag{
+    margin-top:10px;
+    width: 30%;
+    height: 50px;
+    font-size: 160%;
+}
+
+.Display{
+    display: flex;
+    margin-right:5px;
+    margin-top:20px;
+    height:50px;
+    width:80%;
+    font-size: 160%;
+    background-color: rgb(132, 177, 66);
+}
+
+.Write {
+    background-color: white;
+    width: 80%;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    font-size: 180%;
+}
+
+.DeleteTask{
+    margin-top: 50px;
+}
+
+.botonDelete{
+    text-decoration: none;
+    background-color:#5f272c;
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 30px;
+    padding: 10px;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+
+.botonFin:hover, .botonAdd:hover, .botonDelete:hover{
+    background-color: #857375;
+    cursor: pointer;
+}
+

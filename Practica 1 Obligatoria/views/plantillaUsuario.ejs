@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="img/png" href="/recursos/404icon.png">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p class="fecha">
+        Formulada el <%=usuario.fecha%>
+    </p>
+
+    <div class="avatar">
+        <img class="img" src="../../profile_imgs/<%=usuario.avatar%>">
+    </div>
+    
+    <div>
+        <form method="POST" action="/usuarios/perfil">
+            <button class="user" type="submit" name="correo" value="<%=usuario.correo%>"><%=usuario.nombreUsuario%></button>
+        </form>
+    </div>
+
+
+</body>
+
+</html>

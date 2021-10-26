@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="icon" type="img/png" href="/recursos/404icon.png">
+</head>
+
+<body>
+    <div class="heading">
+        <div class="menu">
+            <a class="botones" href="/preguntas/preguntas"><p>Preguntas</p></a>
+            <a class="botones" href="/preguntas/sinResponder"><p>Sin responder</p></a>
+            <a class="botones" href="/usuarios/usuarios"><p>Usuarios</p></a>
+        </div>
+
+        <div class="logo"><img class="logo" src="/recursos/404iconp.png"></div>
+
+        <div class="userInfo">
+            <div class="avatar">
+                <img class="img" src="/usuarios/imagenUsuario">
+            </div>
+
+            <div class="informacion">
+                <form method="POST" action="/usuarios/perfil">
+                    <button class="user" type="submit" name="correo" value="<%=userEmail%>"><%=userName%></button>
+                </form>      
+                          
+                <a class="logout" href="/logout"><p>Cerrar sesion</p></a> 
+            </div> 
+        </div>
+    </div>
+
+    <form method="POST" action="/preguntas/procesar_busqueda">
+        <div class="buscar">
+            <button class="button" type="submit">Buscar</button>
+            <input type="text" name="nombreBusqueda" class="box" placeholder=" 🔎   Buscar por titulo/cuerpo de pregunta">
+        </div>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/principal.css">
+    <link rel="stylesheet" href="/css/preguntas.css">
+    <link rel="icon" type="img/png" href="/recursos/404icon.png">
+    <title>404</title>
+</head>
+
+<body>
+
+    <%- include('header'); %>
+
+    <h1>
+        <%=titulo%>
+    </h1>
+    
+    <div class="headingQuestions">
+        <h2>
+            <%=preguntas.length%> preguntas
+        </h2>
+
+        <a class="botones" href="/preguntas/formular">
+            <p>Formular una pregunta</p>
+        </a>
+    </div>
+
+    <div class="containerQuestions">
+
+        <% if (preguntas !=undefined) { %>
+            <% preguntas.forEach(function(p) { %>
+                <div class="element">
+
+                    <div class="informacionPregunta">
+                        <div>
+                            <a class="title" href="/preguntas/visita/<%=p.id%>">
+                                <%=p.titulo%>
+                            </a>
+                        </div>
+
+                        <%- include('plantillaPregunta', {pregunta: p}); %>
+                    </div>
+
+                    <div class="usuario">
+                        <%- include('plantillaUsuario', {usuario: p}); %>
+                    </div>
+                        
+                </div>
+
+                <% }); %>
+                    <% } %>
+
+
+
+    </div>
+
+</body>
+
+</html>

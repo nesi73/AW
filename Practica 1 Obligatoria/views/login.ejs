@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="icon" type="img/png" href="/recursos/404icon.png">
+    <title>404</title>
+</head>
+
+<body>
+    <div class="logo"><img class="logo" src="/recursos/404iconp.png"></div>
+
+    <form method="POST" action="/usuarios/procesar_login">
+        <div class="datos">
+            <h1>¡Te damos la bienvenida a 404!</h1>
+            <p class="descripcion">¿En búsqueda de respuestas sobre programación? ¡Entra y las encontrarás!</p>
+            <p class="descripcion2">(Y sí, nos gustan los gatos)</p>
+            <div class="info">
+                <input type="email" name="correo" placeholder="Email" id="formCorreo" class="box" required>
+
+                <input type="password" name="password" placeholder="Contraseña" id="formPassword" class="box" required>
+
+                <% if (errorMsg) { %>
+                    <div class="error"><%=errorMsg%></div>
+                 <% } else { %>
+                    <p></p>
+                <% } %>
+
+            </div>
+
+            <button class="button" type="submit">Iniciar sesión</button>
+            <p class="crearCuenta">¿Eres nuevo en 404? <a class="botonUnir" href="/registro"> Únete ahora</a></p>
+        </div>
+    </form>
+
+</body>
+
+</html>

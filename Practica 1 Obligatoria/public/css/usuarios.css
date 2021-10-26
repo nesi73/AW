@@ -1,0 +1,57 @@
+div.filtrarUser{
+    margin-left:10%;
+    margin-top: 100px;
+}
+
+div.filtrarUser .button{
+    border-radius: 5px;
+    margin-left: 6px;
+    margin-bottom: 10px;
+    width: 150px;
+}
+
+div.usuario {
+    width: 100%;
+}
+
+div.filtrarUser .box{
+    width: 500px;
+    height:30px;
+}
+
+div.containerUsers{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width:83%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:10px;
+    padding-bottom:150px;
+    margin-bottom:200px;
+}
+
+div.containerUsers .element{
+    margin-left:25px;
+    height:250px;
+    width:150px;
+    background-color: #c4f0fdce;
+    border-radius: 5%;
+    border: 2px solid #3290C7;
+}
+
+div.containerUsers .tag{
+    margin-left: 4px;
+    font-size: 15px;
+}
+
+div.containerUsers .element:nth-child(odd) {
+    background:#8ee5ffce;
+    border: 2px solid #3290C7;
+}
+
+div.reputacion{
+    font-size:20px;
+    margin-top:9px;
+    font-weight:  bold;
+}

@@ -1,0 +1,13 @@
+.boxFile{
+    font-size:20px;
+    padding:5px;
+    height:20px;
+    width:25%;
+    border: 1px solid black;
+    padding-top: 10px;
+    padding-bottom: 17px;
+}
+
+.descripcion{
+    margin-top: 15px;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/registro.css">
+    <link rel="icon" type="img/png" href="/recursos/404icon.png">
+    <title>404</title>
+</head>
+
+<body>
+    <div class="logo"><img class="logo" src="/recursos/404iconp.png"></div>
+
+    <form method="POST" action="/usuarios/procesar_registro" enctype="multipart/form-data">
+        <div class="datos">
+            <div class="info">
+                <input type="email" name="correo" id="formCorreo" placeholder="Email" class="box" required pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" title="El email debe de ser valido">
+
+                <input type="password" name="password" pattern=".{8,12}" title="De 8 a 12 caracteres" id="formPassword" placeholder="Contraseña" class="box" required>
+
+                <input type="password" name="confirmPassword" pattern=".{8,12}" title="De 8 a 12 caracteres" placeholder="Repita la contraseña" id="formConfirmPassword" class="box" required>
+
+                <input type="text" name="nombre" placeholder="Nombre de usuario" class="box" required>
+
+                <label for="formAvatar">
+                    <p class="descripcion">Seleccione la imagen de perfil (podrán verla otros usuarios):</p>
+                </label>
+                <input type="file" name="avatar" id="formAvatar" class="boxFile">
+
+                <% if (errorMsg) { %>
+                    <div class="error"><%=errorMsg%></div>
+                 <% } else { %>
+                    <p></p>
+                <% } %>
+                
+            </div>
+
+            <button class="button" type="submit">Crear cuenta</button>
+            <p class="crearCuenta">¿Ya eres usuario de 404? <a class="botonUnir" href="/login">Iniciar sesion</a></p>
+        </div>
+    </form>
+</body>
+
+</html>

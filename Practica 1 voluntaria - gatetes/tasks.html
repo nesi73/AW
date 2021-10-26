@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Gestor de Tareas</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" media="screen" href="tasksScreen.css">
+    <link rel="stylesheet" media="print" href="tasksPrint.css"> 
+    <link rel="icon" type="img/png" href="recursos/icon.png">
+</head>
+
+<body>
+
+    <div class="heading">
+        <div class="logo">Esta semana tengo que...</div>
+        <div class="infoUser">
+            <img class="imgUser" src="recursos/gato2.webp">
+            <div class="User">
+                <a href=" ">usuario@gmail.com</a>
+                <a href=" " class="boton">Desconectar</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="containerTasks">
+
+        <div class="elemento">
+            <p class="texto">PREPARAR PRÁCTICA AW</p>
+            <span class="tag">AW</span>
+            <span class="tag">PRÁCTICA</span>
+            <button class="botonFin">MARCAR FINALIZADA</button>
+        </div>
+
+        <div class="elementoCross">
+            <p class="texto texto_cross">MIRAR FECHAS CONGRESO</p>
+        </div>
+   
+        <div class="elemento">
+            <p class="texto">IR AL SUPERMERCADO</p>
+            <span class="tag">PERSONAL</span>
+            <button class="botonFin">MARCAR FINALIZADA</button>
+        </div>
+
+        <div class="elemento">
+            <p class="texto">MUDANZA</p>
+            <span class="tag">PERSONAL</span>
+            <button class="botonFin">MARCAR FINALIZADA</button>
+        </div>
+
+        <div class="AddTask">
+        <form action="procesar_formulario" method=" método ">
+            <input type="text" class="Write">
+            <input type="submit" button class="botonAdd" value=AÑADIR></button>
+            </form>
+        </div>
+
+        <div class="DeleteTask">
+            <button class="botonDelete">Eliminar Tareas Completadas</button> 
+        </div>
+    </div>
+
+</body>
+
+</html>

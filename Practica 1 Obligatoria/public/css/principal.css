@@ -1,0 +1,121 @@
+div.menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-top: 40px;
+}
+
+.button{
+    cursor: pointer;
+}
+
+div.buscar{
+    margin-top: 50px;
+    margin-left: 80px;
+    margin-bottom: 35px;
+}
+
+div.buscar .button{
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 150px;
+}
+
+div.buscar .box{
+    font-size:20px;
+    margin-bottom:20px;
+    padding:5px;
+    height:30px;
+    width:80%;
+}
+
+.botones{
+    width: 200px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size:22px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #0f679b;
+    color: white;
+    border: 2px solid rgb(36, 45, 85);
+}
+
+.botones:hover {
+    color:white;
+    background-color:#6CC8C3;
+}
+
+.botones p{
+    text-align: center;
+}
+
+div.heading{
+    display:flex;
+}
+
+div.userInfo{
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+    justify-content: right;
+    align-items: center;
+    margin-top: 10px;
+    margin-right: 30px;
+}
+
+div.informacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logout{
+    border-radius: 5px;
+    text-align: center;
+    font-size:22px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+    margin-top: 15px;
+    background-color: #0f679b;
+    color: white;
+    border: 2px solid rgb(36, 45, 85);
+    width:150px;
+}
+
+.user{
+    font-weight: bold;
+}
+
+button{ /*no es lo mismo que .button*/
+    background: none;
+    border: none;
+    font-size:20px;
+    cursor:pointer;
+}
+
+.user:hover{
+    color:rgb(239, 116, 250);
+}
+
+.logout:hover {
+    color:white;
+    background-color:#6CC8C3;
+}
+
+div.avatar{
+    display: flex;
+    justify-content: center;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.img{
+    height:120px;
+}
+
+.box{
+    width: 78%;
+}

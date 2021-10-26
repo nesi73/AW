@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/principal.css">
+    <link rel="stylesheet" href="/css/formular.css">
+    <link rel="icon" type="img/png" href="/recursos/404icon.png">
+    <title>404</title>
+</head>
+
+<body>
+    
+    <%- include('header'); %>
+
+    <h1>Formular una pregunta</h1>
+
+    <form class="formular" method="POST" action="/preguntas/procesar_formular">
+        <div class="askQuestion">
+
+            <div class="title">
+                <label for="formTitulo">
+                    <h4>Titulo *</h4>
+                    <p>Sé especifico e imagina que estás haciendo la pregunta a otra persona</p>
+                </label>
+                <input type="text" name="titulo" class="box" placeholder="¿Cuál es tu pregunta sobre programación de aplicaciones web?" required>
+            </div>
+
+            <div class="askBody"> 
+                <label for="formCuerpo">
+                    <h4>Cuerpo *</h4>
+                    <p>Incluye toda la informacion que alguien necesitaria para responder tu pregunta</p>
+                </label>
+                <textarea name="cuerpo" class="box" required></textarea>
+            </div>
+
+            <div class="labels">
+                <label for="formEtiquetas">
+                    <h4>Etiquetas</h4>
+                    <p>Añade hasta 5 etiquetas para describir sobre qué trata tu pregunta</p>
+                </label> 
+                <input type="text" name="etiquetas" class="box" placeholder="Por ejemplo: @node@express">
+            </div>
+
+            <button class="button" type="submit">Publica tu pregunta</button>
+        </div>
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Gestor de Tareas</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" media="screen" href="css/tasksScreen.css">
+    <link rel="stylesheet" media="print" href="css/tasksPrint.css"> 
+    <link rel="icon" type="img/png" href="img/icon.png">
+</head>
+
+<body>
+
+    <div class="login">
+
+        <form method="POST" action="procesar_login">
+            <div class="datos">
+                <div class="info">
+                    <label for="formCorreo">
+                        <p>Direccion de correo</p>
+                    </label>
+                    <input type="text" name="correo" id="formCorreo" class="box" required>
+    
+                    <label for="formPassword">
+                        <p>Contraseña</p>
+                    </label>
+                    <input type="text" name="password" id="formPassword" class="box" required>
+                </div>
+
+                <% if (errorMsg) { %>
+                    <div class="error"><%=errorMsg%></div>
+                 <% } else { %>
+                    <p></p>
+                <% } %>
+
+                <div class="aceptar">
+                    <button class="button" type="submit">Aceptar</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+</body>
+
+</html>
